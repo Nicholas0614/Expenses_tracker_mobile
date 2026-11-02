@@ -1,0 +1,14 @@
+PocketBook V2 — UI refinement
+
+Updated:
+- Add/Edit Transaction wallet and type selection: compact scrollable selection sheets
+- Activity wallet and category filters: compact selection sheets, no stock radio dialogs
+- Activity filter labels: centred text, removed hard-coded arrow glyphs
+- Budget month arrows and back button: centered vector icons instead of font glyphs
+- Backup & Restore: new scrollable card layout, clear actions, status and warning card
+- Shared PocketFormUi: reusable choose() helper
+
+Financial database and repository logic unchanged.
+
+Open the project in Android Studio, build/run, and check the updated screens.
+Do not uninstall your existing app or clear its data. Make a backup before installing new builds.

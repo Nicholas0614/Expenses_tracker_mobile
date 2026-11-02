@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.pocketbook_expensetracker.home.HomeFragment"
+        android:label="Home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_transactionsFragment"
+            app:destination="@id/transactionsFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_addExpenseFragment"
+            app:destination="@id/addExpenseFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_reportsFragment"
+            app:destination="@id/reportsFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_walletsFragment"
+            app:destination="@id/walletsFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_budgetsFragment"
+            app:destination="@id/budgetsFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_backupFragment"
+            app:destination="@id/backupFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/walletsFragment"
+        android:name="com.example.pocketbook_expensetracker.ui.wallets.WalletsFragment"
+        android:label="My Wallets" />
+
+    <fragment
+        android:id="@+id/budgetsFragment"
+        android:name="com.example.pocketbook_expensetracker.ui.budgets.BudgetsFragment"
+        android:label="Monthly Budgets" />
+
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.example.pocketbook_expensetracker.ui.transactions.TransactionsFragment"
+        android:label="Transactions">
+
+        <action
+            android:id="@+id/action_transactionsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+        <action
+            android:id="@+id/action_transactionsFragment_to_addExpenseFragment"
+            app:destination="@id/addExpenseFragment" />
+
+        <action
+            android:id="@+id/action_transactionsFragment_to_editExpenseFragment"
+            app:destination="@id/editExpenseFragment" />
+
+        <action
+            android:id="@+id/action_transactionsFragment_to_reportsFragment"
+            app:destination="@id/reportsFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/integrityFragment"
+        android:name="com.example.pocketbook_expensetracker.ui.integrity.IntegrityFragment"
+        android:label="Financial Audit" />
+
+
+
+    <fragment
+        android:id="@+id/backupFragment"
+        android:name="com.example.pocketbook_expensetracker.ui.backup.BackupFragment"
+        android:label="Backup and Restore" />
+
+
+    <fragment
+        android:id="@+id/addExpenseFragment"
+        android:name="com.example.pocketbook_expensetracker.home.AddExpenseFragment"
+        android:label="Add Expense" />
+
+    <fragment
+        android:id="@+id/editExpenseFragment"
+        android:name="com.example.pocketbook_expensetracker.home.EditExpenseFragment"
+        android:label="Edit Expense">
+
+        <argument
+            android:name="transactionId"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.example.pocketbook_expensetracker.ui.reports.ReportsFragment"
+        android:label="Reports">
+
+        <action
+            android:id="@+id/action_reportsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+        <action
+            android:id="@+id/action_reportsFragment_to_transactionsFragment"
+            app:destination="@id/transactionsFragment" />
+
+    </fragment>
+
+</navigation>

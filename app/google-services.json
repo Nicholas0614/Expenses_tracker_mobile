@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "447788686854",
+    "project_id": "pocketbook-expensetracker",
+    "storage_bucket": "pocketbook-expensetracker.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447788686854:android:93c56a9aeab79cec176d87",
+        "android_client_info": {
+          "package_name": "com.example.pocketbook_expensetracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAC-UrJ57pEUvEy-hCjZnkXX-BqMjT8doQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/pocket_bg">
+
+    <ScrollView android:id="@+id/scrollHeader" android:layout_width="0dp" android:layout_height="wrap_content" android:fillViewport="true" android:scrollbars="none" app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="20dp" android:paddingEnd="20dp" android:paddingTop="26dp" android:paddingBottom="12dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="YOUR MONEY HISTORY" android:textSize="11sp" android:letterSpacing="0.07" android:textStyle="bold" android:textColor="@color/pocket_grey" android:fontFamily="@font/poppins_regular"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Activity" android:textSize="26sp" android:textStyle="bold" android:textColor="@color/pocket_navy" android:fontFamily="@font/poppins_regular"/>
+                </LinearLayout>
+
+                <TextView android:id="@+id/btnSort" android:layout_width="48dp" android:layout_height="48dp" android:gravity="center" android:text="↕" android:textSize="26sp" android:contentDescription="Toggle date order" android:background="@drawable/bg_white_card" android:textColor="@color/pocket_teal" android:fontFamily="@font/poppins_regular"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:background="@drawable/bg_balance" android:orientation="vertical" android:padding="20dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="FILTERED TRANSACTIONS" android:textSize="12sp" android:textColor="#B8CCF0" android:fontFamily="@font/poppins_regular"/>
+
+                <TextView android:id="@+id/tvNet" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="RM 0.00" android:textSize="28sp" android:textStyle="bold" android:textColor="#FFFFFF" android:fontFamily="@font/poppins_regular"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="14dp">
+
+                    <TextView android:id="@+id/tvIncome" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Income RM 0.00" android:textSize="12sp" android:textColor="#83E0BF" android:fontFamily="@font/poppins_regular"/>
+
+                    <TextView android:id="@+id/tvExpenses" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="end" android:text="Expenses RM 0.00" android:textSize="12sp" android:textColor="#FFB3B3" android:fontFamily="@font/poppins_regular"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText android:id="@+id/etSearch" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="16dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="@drawable/bg_white_card" android:hint="Search name, note, category..." android:inputType="text" android:singleLine="true" android:textSize="14sp" android:fontFamily="@font/poppins_regular"/>
+
+            <com.google.android.material.chip.ChipGroup android:id="@+id/chipGroupType" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:singleSelection="true" app:selectionRequired="true">
+
+                <com.google.android.material.chip.Chip android:id="@+id/chipAll" style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="All" android:checked="true" android:checkable="true"/>
+
+                <com.google.android.material.chip.Chip android:id="@+id/chipExpenses" style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Expenses" android:checkable="true"/>
+
+                <com.google.android.material.chip.Chip android:id="@+id/chipIncome" style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Income" android:checkable="true"/>
+            </com.google.android.material.chip.ChipGroup>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+
+                <TextView android:id="@+id/btnWalletFilter" android:textAlignment="center" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:layout_marginEnd="5dp" android:background="@drawable/bg_white_card" android:gravity="center" android:padding="8dp" android:maxLines="1" android:ellipsize="end" android:text="All wallets" android:textSize="13sp" android:textColor="@color/pocket_navy" android:fontFamily="@font/poppins_regular"/>
+
+                <TextView android:id="@+id/btnCategoryFilter" android:textAlignment="center" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:layout_marginStart="5dp" android:background="@drawable/bg_white_card" android:gravity="center" android:padding="8dp" android:maxLines="1" android:ellipsize="end" android:text="All categories" android:textSize="13sp" android:textColor="@color/pocket_navy" android:fontFamily="@font/poppins_regular"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="18dp">
+
+                <TextView android:id="@+id/tvCount" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="0 transactions" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/pocket_navy" android:fontFamily="@font/poppins_regular"/>
+
+                <TextView android:id="@+id/tvSortLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Newest first" android:textSize="12sp" android:textColor="@color/pocket_teal" android:fontFamily="@font/poppins_regular"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvTransactions" android:layout_width="0dp" android:layout_height="0dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" android:clipToPadding="false" android:paddingBottom="82dp" android:scrollbars="none" app:layout_constraintTop_toBottomOf="@id/scrollHeader" app:layout_constraintBottom_toTopOf="@id/btnAdd" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView android:id="@+id/tvEmpty" android:layout_width="0dp" android:layout_height="wrap_content" android:gravity="center" android:padding="24dp" android:text="No matching transactions" android:textSize="14sp" android:textColor="@color/pocket_grey" android:visibility="gone" app:layout_constraintTop_toTopOf="@id/rvTransactions" app:layout_constraintBottom_toBottomOf="@id/rvTransactions" app:layout_constraintStart_toStartOf="@id/rvTransactions" app:layout_constraintEnd_toEndOf="@id/rvTransactions" android:fontFamily="@font/poppins_regular"/>
+
+
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnAdd" android:layout_width="wrap_content" android:layout_height="56dp" android:layout_marginEnd="18dp" android:layout_marginBottom="16dp" android:text="Add Expense" android:textSize="14sp" android:textAllCaps="false" android:textColor="#FFFFFF" android:elevation="8dp" android:backgroundTint="@color/pocket_teal" app:cornerRadius="18dp" app:layout_constraintBottom_toTopOf="@id/bottomNav" app:layout_constraintEnd_toEndOf="parent" android:fontFamily="@font/poppins_regular"/>
+
+
+    <LinearLayout android:id="@+id/bottomNav" android:layout_width="0dp" android:layout_height="66dp" android:orientation="horizontal" android:gravity="center" android:background="#FFFFFF" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView android:id="@+id/navHome" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="⌂&#10;Home" android:textSize="12sp" android:textColor="@color/pocket_grey" android:fontFamily="@font/poppins_regular"/>
+
+        <TextView android:id="@+id/navActivity" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="☷&#10;Activity" android:textStyle="bold" android:textSize="12sp" android:textColor="@color/pocket_teal" android:fontFamily="@font/poppins_regular"/>
+
+        <TextView android:id="@+id/navReports" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="▥&#10;Reports" android:textSize="12sp" android:textColor="@color/pocket_grey" android:fontFamily="@font/poppins_regular"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

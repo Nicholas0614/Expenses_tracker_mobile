@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pocket_bg">#F7F9FC</color>
+    <color name="pocket_navy">#14213F</color>
+    <color name="pocket_teal">#0C9093</color>
+    <color name="pocket_light_teal">#E4F4F3</color>
+    <color name="pocket_red">#E93655</color>
+    <color name="pocket_green">#00B99A</color>
+    <color name="pocket_grey">#667795</color>
+    <color name="pocket_border">#E3E8EF</color>
+    <color name="pocket_progress_bg">#304062</color>
+
+</resources>

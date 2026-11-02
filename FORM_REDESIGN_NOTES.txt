@@ -1,0 +1,10 @@
+PocketBook V2 - Form redesign
+
+Complete source replacements are included in this project.
+Changed: PocketFormUi.kt (new), styles_pocket_form.xml (new), WalletsFragment.kt, BudgetsFragment.kt, AddExpenseFragment.kt, EditExpenseFragment.kt, TransactionsFragment.kt, BackupFragment.kt.
+
+All existing local repositories, database schema, backup operations, and transaction calculations are preserved.
+
+UI changes: rounded dialog surfaces, filled bordered inputs, consistent uppercase captions, better spacing and teal action buttons; selectors and confirmation dialogs share the same theme.
+
+Open this folder in Android Studio; build and test the form interactions. No data deletion or migration is necessary.

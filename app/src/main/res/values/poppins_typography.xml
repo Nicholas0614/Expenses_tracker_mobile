@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PocketTextBodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="PocketTextBodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="PocketTextBodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+</resources>

@@ -1,0 +1,8 @@
+PocketBook category and add-expense update
+- Database version 5 creates custom_categories without deleting existing finance records.
+- The New category tile creates and saves a named custom category; future Add/Edit forms show the category.
+- Budget category picker includes saved categories.
+- Backup JSON v3 preserves custom categories and restores v1/v2 backups.
+- Home and Activity show Add Expense floating above the navigation bar at bottom left.
+- Open the project in Android Studio and build; Android emulator build is not available in this environment.
+- Export a financial backup before installing the update. Do not clear app storage.
